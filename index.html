@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feedback Form</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWx8ZW58MHx8MHx8fDA%3D') no-repeat center center/cover;
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 16px;
+      padding: 30px 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      width: 100%;
+      max-width: 400px;
+      color: #fff;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 24px;
+      color: #ffffff;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 14px;
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #eee;
+    }
+
+    input[type="submit"] {
+      background-color: rgba(255, 255, 255, 0.3);
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      width: 100%;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Submit Your Feedback</h2>
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DgK000003c3OC" method="POST">
+      <input type="hidden" name="orgid" value="00DgK000003c3OC">
+      <input type="hidden" name="retURL" value="http://gmail.com">
+
+      <label for="00NgK000012NWWz">Booking Id:</label>
+      <input id="00NgK000012NWWz" maxlength="20" name="00NgK000012NWWz" size="20" type="text" placeholder="Enter your booking ID" required>
+
+      <label for="00NgK000012N33R">Feedback:</label>
+      <textarea id="00NgK000012N33R" name="00NgK000012N33R" rows="4" placeholder="Share your experience..." required></textarea>
+
+      <input type="submit" name="submit" value="Submit Feedback">
+    </form>
+  </div>
+</body>
+</html>
